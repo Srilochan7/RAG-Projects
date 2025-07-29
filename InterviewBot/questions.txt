@@ -1,0 +1,619 @@
+Machine Learning (ML) Questions
+
+Question: What is Machine Learning?
+Answer: A field of AI that enables systems to learn and improve from experience without being explicitly programmed.
+
+Question: What are the three main types of machine learning?
+Answer: Supervised, Unsupervised, and Reinforcement Learning.
+
+Question: What is Supervised Learning?
+Answer: Learning from labeled data to make predictions.
+
+Question: What is Unsupervised Learning?
+Answer: Finding patterns or structures in unlabeled data.
+
+Question: What is Reinforcement Learning?
+Answer: An agent learns to make decisions by taking actions in an environment to maximize a cumulative reward.
+
+Question: What is the difference between classification and regression?
+Answer: Classification predicts a discrete category, while regression predicts a continuous value.
+
+Question: What is overfitting?
+Answer: When a model learns the training data too well, including its noise, and performs poorly on new, unseen data.
+
+Question: What is underfitting?
+Answer: When a model is too simple to capture the underlying patterns in the data, resulting in poor performance on both training and new data.
+
+Question: What is a confusion matrix?
+Answer: A table used to evaluate the performance of a classification model by showing true positives, true negatives, false positives, and false negatives.
+
+Question: What are Precision and Recall?
+Answer: Precision measures the accuracy of positive predictions (TP / (TP + FP)). Recall measures the model's ability to find all actual positives (TP / (TP + FN)).
+
+Question: What is the F1-Score?
+Answer: The harmonic mean of Precision and Recall, providing a single metric to evaluate a model.
+
+Question: What is a Decision Tree?
+Answer: A tree-like model of decisions and their possible consequences, used for both classification and regression.
+
+Question: What is a Random Forest?
+Answer: An ensemble learning method that operates by constructing multiple decision trees at training time.
+
+Question: What is Support Vector Machine (SVM)?
+Answer: A supervised learning algorithm that finds a hyperplane that best separates data points of different classes in a high-dimensional space.
+
+Question: What is K-Means Clustering?
+Answer: An unsupervised learning algorithm that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean.
+
+Question: What is Gradient Descent?
+Answer: An optimization algorithm used to minimize a function by iteratively moving in the direction of the steepest descent of the loss function.
+
+Question: What is a feature?
+Answer: An individual measurable property or characteristic of a phenomenon being observed.
+
+Question: What is feature engineering?
+Answer: The process of using domain knowledge to create features that make machine learning algorithms work better.
+
+Question: What is cross-validation?
+Answer: A resampling technique used to evaluate machine learning models on a limited data sample by partitioning the data into a training set and a testing set.
+
+Question: What is the Bias-Variance Tradeoff?
+Answer: A fundamental concept describing the tradeoff between a model's ability to minimize bias (error from wrong assumptions) and variance (error from sensitivity to small fluctuations in the training set).
+
+Deep Learning (DL) Questions
+
+Question: What is Deep Learning?
+Answer: A subfield of machine learning based on artificial neural networks with many layers (deep architectures).
+
+Question: What is a Neural Network?
+Answer: A series of algorithms that endeavors to recognize underlying relationships in a set of data through a process that mimics the way the human brain operates.
+
+Question: What is a neuron or node in a neural network?
+Answer: A computational unit that receives inputs, applies a weight, and passes the result through an activation function.
+
+Question: What is an activation function?
+Answer: A function in a neural network that defines the output of a node given a set of inputs. Examples include ReLU, Sigmoid, and Tanh.
+
+Question: What is the purpose of the ReLU activation function?
+Answer: It introduces non-linearity into the network, allowing it to learn more complex patterns. It outputs the input directly if positive, otherwise, it outputs zero.
+
+Question: What is backpropagation?
+Answer: An algorithm used to train neural networks by calculating the gradient of the loss function with respect to the network's weights.
+
+Question: What is a loss function (or cost function)?
+Answer: A function that measures the difference between the model's prediction and the actual target values.
+
+Question: What is a Convolutional Neural Network (CNN)?
+Answer: A type of deep neural network designed for processing structured grid data, such as images.
+
+Question: What is a convolutional layer in a CNN?
+Answer: A layer that applies a set of learnable filters (kernels) to the input to create feature maps.
+
+Question: What is a pooling layer in a CNN?
+Answer: A layer that reduces the spatial dimensions (width and height) of the input volume, reducing computational load and controlling overfitting.
+
+Question: What is a Recurrent Neural Network (RNN)?
+Answer: A type of neural network designed to work with sequential data, where connections between nodes form a directed graph along a temporal sequence.
+
+Question: What is the vanishing gradient problem?
+Answer: A difficulty found in training deep neural networks where gradients become very small during backpropagation, making it difficult for the network to learn.
+
+Question: What is the exploding gradient problem?
+Answer: The opposite of the vanishing gradient problem, where gradients become excessively large, leading to unstable training.
+
+Question: What is a Long Short-Term Memory (LSTM) network?
+Answer: A special kind of RNN capable of learning long-term dependencies by using a gating mechanism.
+
+Question: What is a Gated Recurrent Unit (GRU)?
+Answer: A simpler variant of the LSTM with fewer gates, often providing similar performance with less computation.
+
+Question: What is a dropout layer?
+Answer: A regularization technique where randomly selected neurons are ignored during training to prevent overfitting.
+
+Question: What is an optimizer in deep learning?
+Answer: An algorithm that modifies the attributes of the neural network, such as weights and learning rate, to reduce the losses. Examples include Adam, SGD, and RMSprop.
+
+Question: What is batch normalization?
+Answer: A technique for training very deep neural networks that standardizes the inputs to a layer for each mini-batch.
+
+Question: What is transfer learning?
+Answer: A machine learning method where a model developed for a task is reused as the starting point for a model on a second task.
+
+Question: What is the difference between a dense layer and a convolutional layer?
+Answer: A dense layer connects every neuron in one layer to every neuron in the next layer. A convolutional layer uses filters to connect neurons to only a local region of the input.
+
+Transformers Questions
+
+Question: What is the Transformer architecture?
+Answer: A neural network architecture based on the self-attention mechanism, designed to handle sequential data without using recurrent connections.
+
+Question: What is the self-attention mechanism?
+Answer: A mechanism that allows the model to weigh the importance of different words in an input sequence when processing a specific word.
+
+Question: What are the key components of the Transformer architecture?
+Answer: An encoder stack and a decoder stack, both built with multi-head self-attention and feed-forward neural networks.
+
+Question: What are Query, Key, and Value vectors in attention?
+Answer: Projections of the input vectors used to compute attention scores. The query of one word is matched against the keys of all other words to get scores, which are then used to create a weighted sum of the values.
+
+Question: What is Multi-Head Attention?
+Answer: A mechanism that runs the attention process multiple times in parallel with different, learned linear projections of Queries, Keys, and Values, then concatenates the results.
+
+Question: What is the purpose of Positional Encoding?
+Answer: To inject information about the relative or absolute position of the tokens in the sequence, as the Transformer architecture itself does not have a notion of sequence order.
+
+Question: What is the role of the encoder in a Transformer?
+Answer: To process the input sequence and generate a rich contextual representation of each token.
+
+Question: What is the role of the decoder in a Transformer?
+Answer: To generate the output sequence one token at a time, using the encoder's output and the previously generated tokens.
+
+Question: What is a "feed-forward network" in the Transformer block?
+Answer: A simple, fully connected neural network applied to each position separately and identically. It consists of two linear transformations with a ReLU activation in between.
+
+Question: What is BERT?
+Answer: Bidirectional Encoder Representations from Transformers. It's a Transformer-based model designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context.
+
+Question: How is BERT pre-trained?
+Answer: Using two main tasks: Masked Language Model (MLM) and Next Sentence Prediction (NSP).
+
+Question: What is GPT?
+Answer: Generative Pre-trained Transformer. It's a family of Transformer-based models that are pre-trained on a vast corpus of text data and are excellent at generating human-like text.
+
+Question: What is the main difference between BERT and GPT's architecture?
+Answer: BERT is primarily an encoder-based model (processes the entire sequence at once), while GPT is a decoder-based model (generates text auto-regressively).
+
+Question: What is tokenization?
+Answer: The process of breaking down a piece of text into smaller units called tokens (e.g., words, subwords, or characters).
+
+Question: What is a "token" in the context of Transformers?
+Answer: The basic unit of text that the model processes. It can be a word, part of a word (subword), or a character.
+
+Question: What is temperature scaling in text generation?
+Answer: A parameter used to control the randomness of predictions by scaling the logits before applying softmax. Higher temperature means more randomness.
+
+Question: What is top-k sampling?
+Answer: A text generation strategy where the model's next token is sampled only from the top 'k' most likely tokens.
+
+Question: What is nucleus (top-p) sampling?
+Answer: A text generation strategy where the model samples from the smallest set of tokens whose cumulative probability is greater than a threshold 'p'.
+
+Question: What is T5 (Text-to-Text Transfer Transformer)?
+Answer: A Transformer model that frames all NLP tasks as a text-to-text problem, where the input is text and the output is also text.
+
+Question: What advantage does the Transformer have over RNNs for long sequences?
+Answer: Transformers can process tokens in parallel and have a shorter path to capture long-range dependencies via self-attention, mitigating the vanishing gradient problem associated with RNNs.
+
+Generative AI (Gen AI) Questions
+
+Question: What is Generative AI?
+Answer: A branch of AI that can generate new, original content, such as text, images, music, and code, based on patterns learned from existing data.
+
+Question: What is a Large Language Model (LLM)?
+Answer: A type of generative AI model, typically based on the Transformer architecture, that is trained on massive amounts of text data to understand and generate human-like language.
+
+Question: What is a Generative Adversarial Network (GAN)?
+Answer: A generative model consisting of two competing neural networks: a generator that creates new data and a discriminator that tries to distinguish real data from fake data.
+
+Question: What is a Variational Autoencoder (VAE)?
+Answer: A generative model that learns a probabilistic mapping from input data to a latent space, allowing it to generate new data by sampling from this latent space.
+
+Question: What are Diffusion Models?
+Answer: Generative models that work by progressively adding noise to data and then learning to reverse the process to generate new data from noise.
+
+Question: What is prompt engineering?
+Answer: The process of carefully designing and refining input text (prompts) to guide a generative AI model to produce a desired output.
+
+Question: What is "zero-shot" prompting?
+Answer: Asking a model to perform a task it hasn't been explicitly trained on, without providing any examples in the prompt.
+
+Question: What is "few-shot" prompting?
+Answer: Providing a few examples of the desired input-output format within the prompt to guide the model's response.
+
+Question: What is fine-tuning in the context of LLMs?
+Answer: The process of further training a pre-trained model on a smaller, task-specific dataset to adapt it to a particular application.
+
+Question: What is a "hallucination" in LLMs?
+Answer: When an LLM generates text that is factually incorrect, nonsensical, or not grounded in the provided source data.
+
+Question: What is instruction tuning?
+Answer: A form of fine-tuning where a model is trained on a dataset of instructions and their desired outputs to improve its ability to follow user commands.
+
+Question: What is DALL-E?
+Answer: A generative AI model developed by OpenAI that creates images from textual descriptions.
+
+Question: What is Midjourney?
+Answer: An independent research lab and the name of their generative AI program that creates images from textual descriptions, known for its artistic style.
+
+Question: What is Stable Diffusion?
+Answer: A popular open-source text-to-image diffusion model.
+
+Question: How can generative AI be used for code generation?
+Answer: By training on vast amounts of source code, models like GitHub Copilot can suggest code snippets, complete functions, or even write entire programs based on natural language descriptions.
+
+Question: What are the ethical concerns of Generative AI?
+Answer: Misinformation, deepfakes, copyright issues, bias in generated content, and potential for malicious use.
+
+Question: What is Constitutional AI?
+Answer: A technique developed by Anthropic to train AI models to be helpful and harmless without human feedback, by using a set of principles (a "constitution") to guide its responses.
+
+Question: What is Chain-of-Thought (CoT) prompting?
+Answer: A prompting technique that encourages the model to explain its reasoning step-by-step before giving a final answer, which often improves performance on complex tasks.
+
+Question: What is emergent ability in LLMs?
+Answer: Abilities that are not present in smaller models but appear in larger models, such as the ability to perform arithmetic or solve complex reasoning problems.
+
+Question: What is model alignment?
+Answer: The process of ensuring an AI model's goals and behaviors align with human values and intentions.
+
+LangChain & RAG Questions
+
+Question: What is LangChain?
+Answer: An open-source framework designed to simplify the development of applications powered by large language models (LLMs).
+
+Question: What are the core components of LangChain?
+Answer: Models, Prompts, Chains, Indexes, Memory, and Agents.
+
+Question: What is a "Chain" in LangChain?
+Answer: A sequence of calls, either to an LLM, a tool, or a data preprocessing step. It's the core concept for linking components together.
+
+Question: What is an "Agent" in LangChain?
+Answer: A system that uses an LLM to decide which actions to take. It can use a suite of tools (like search or a calculator) and will decide which one to use based on the user's input.
+
+Question: What is a "Tool" in LangChain?
+Answer: A function that an agent can use to interact with the outside world, such as a search engine API, a database query function, or a calculator.
+
+Question: What is Retrieval-Augmented Generation (RAG)?
+Answer: An AI framework for improving the quality of LLM-generated responses by grounding the model on external sources of knowledge.
+
+Question: How does RAG work?
+Answer: It retrieves relevant information from an external knowledge base (like a set of documents) and provides it as context to the LLM along with the user's query.
+
+Question: Why is RAG useful?
+Answer: It helps reduce hallucinations, allows the LLM to access up-to-date information, and provides users with sources for the generated answers.
+
+Question: What are the two main phases of a RAG system?
+Answer: 1. Indexing (processing and storing the knowledge base) and 2. Retrieval & Generation (finding relevant context and generating a response).
+
+Question: What is a vector database?
+Answer: A specialized database designed to store and query high-dimensional vectors, which are numerical representations (embeddings) of data like text or images.
+
+Question: Why are vector databases used in RAG?
+Answer: They allow for efficient similarity searching, which is crucial for finding the most relevant documents to a user's query based on semantic meaning.
+
+Question: What is an "embedding" in the context of RAG?
+Answer: A numerical vector representation of a piece of text (or other data) that captures its semantic meaning.
+
+Question: What is the "retriever" in a RAG pipeline?
+Answer: The component responsible for taking a user's query, converting it to an embedding, and searching the vector database to find the most relevant document chunks.
+
+Question: What is "chunking"?
+Answer: The process of breaking down large documents into smaller, manageable pieces (chunks) before creating embeddings and storing them in a vector database.
+
+Question: Why is chunking important for RAG?
+Answer: It helps ensure that the retrieved context is focused and fits within the LLM's context window, improving the relevance and quality of the generation.
+
+Question: What is the difference between an Agent and a Chain in LangChain?
+Answer: A Chain follows a predetermined sequence of steps. An Agent uses an LLM to reason and decide on a sequence of actions dynamically at runtime.
+
+Question: What is "Memory" in LangChain?
+Answer: A component that allows chains or agents to remember previous interactions, enabling conversational context.
+
+Question: What is LCEL (LangChain Expression Language)?
+Answer: A declarative way to compose chains in LangChain, making it easier to build and stream complex sequences of operations.
+
+Question: What problem does RAG solve that fine-tuning does not?
+Answer: RAG provides a way to incorporate new or external knowledge without retraining the model, making it ideal for information that changes frequently.
+
+Question: What are some popular vector databases used with LangChain?
+Answer: Chroma, Pinecone, FAISS (Facebook AI Similarity Search), and Weaviate.
+
+Advanced Machine Learning (ML) Questions
+
+Question: What is the primary difference between Bagging and Boosting ensemble methods?
+Answer: Bagging trains models in parallel on different data subsets to reduce variance. Boosting trains models sequentially, where each model corrects the errors of its predecessor, to reduce bias.
+
+Question: What is L1 regularization (Lasso) and how does it differ from L2 (Ridge)?
+Answer: L1 adds a penalty equal to the absolute value of the magnitude of coefficients, which can shrink some coefficients to zero, performing feature selection. L2 adds a penalty equal to the square of the magnitude, which shrinks coefficients but doesn't set them to zero.
+
+Question: What does the 'C' parameter represent in a Support Vector Machine?
+Answer: It's the regularization parameter that controls the trade-off between maximizing the margin and minimizing the classification error. A small C creates a larger margin at the cost of more misclassifications.
+
+Question: What is Principal Component Analysis (PCA)?
+Answer: A linear dimensionality reduction technique that transforms data into a new coordinate system of orthogonal principal components, ordered by the amount of variance they capture.
+
+Question: How does t-SNE differ from PCA?
+Answer: t-SNE (t-Distributed Stochastic Neighbor Embedding) is a non-linear technique primarily used for data visualization in low dimensions (2D or 3D), while PCA is a linear technique focused on variance maximization.
+
+Question: What is the AUC-ROC curve?
+Answer: The Area Under the Receiver Operating Characteristic curve. It's a performance metric for classification that plots the true positive rate against the false positive rate at various threshold settings.
+
+Question: What is XGBoost?
+Answer: An optimized distributed gradient boosting library that implements gradient boosting machines with several regularization (like L1/L2) and performance enhancements (like parallel processing).
+
+Question: What is the Naive Bayes algorithm's "naive" assumption?
+Answer: It naively assumes that all features in the dataset are mutually independent of each other, given the class label.
+
+Question: What is Gini Impurity?
+Answer: A metric used in decision trees to measure the probability of a randomly chosen element from a set being incorrectly labeled if it were randomly labeled according to the distribution of labels in the subset.
+
+Question: Why is logistic regression considered a classification algorithm?
+Answer: Despite its name, it models the probability of a discrete, categorical outcome (e.g., 0 or 1), making it a tool for classification.
+
+Question: What is a Stationary Time Series?
+Answer: A time series whose statistical properties such as mean, variance, and autocorrelation are constant over time. Many time series models require stationarity.
+
+Question: What is the curse of dimensionality?
+Answer: A phenomenon where feature space becomes increasingly sparse as the number of dimensions increases, making algorithms that rely on distance metrics (like k-NN) less effective and requiring more data.
+
+Question: What is Maximum Likelihood Estimation (MLE)?
+Answer: A method for estimating the parameters of a statistical model by finding the parameter values that maximize the likelihood function, i.e., maximize the probability of observing the given data.
+
+Question: What is a Gaussian Mixture Model (GMM)?
+Answer: A probabilistic model for representing normally distributed subpopulations within an overall population. It's a soft-clustering algorithm where each point has a probability of belonging to each cluster.
+
+Question: What is Manifold Learning?
+Answer: An approach to non-linear dimensionality reduction which assumes that high-dimensional data lies on a lower-dimensional manifold. Techniques like Isomap and LLE are examples.
+
+Question: What is LightGBM and how does it differ from XGBoost?
+Answer: LightGBM is another gradient boosting framework that uses a leaf-wise tree growth strategy, which can be faster than XGBoost's level-wise growth but may overfit on smaller datasets.
+
+Question: What is perplexity as a metric?
+Answer: In language modeling, perplexity is the exponentiated average negative log-likelihood of a sequence. A lower perplexity indicates the model is better at predicting the sample text.
+
+Question: What is One-Hot Encoding?
+Answer: A process of converting categorical variables into a binary vector representation where each category is represented by a unique dimension with a value of 1, and all other dimensions are 0.
+
+Question: What is CatBoost?
+Answer: A gradient boosting on decision trees library that provides excellent results with categorical features out-of-the-box by using an efficient method of encoding them.
+
+Question: What is Isotonic Regression?
+Answer: A form of regression that fits a non-decreasing free-form line to a sequence of observations. It's useful when the relationship is known to be monotonic.
+
+Advanced Deep Learning (DL) Questions
+
+Question: What is a Residual Connection as seen in ResNet?
+Answer: A "skip connection" that adds the input of a block of layers to its output. This allows gradients to flow more easily through very deep networks, mitigating the vanishing gradient problem.
+
+Question: What is the main idea behind the Inception module?
+Answer: To perform multiple different-sized convolutions (1x1, 3x3, 5x5) and pooling operations in parallel and concatenate their outputs, allowing the network to capture features at various scales simultaneously.
+
+Question: What is the AdamW optimizer?
+Answer: A variant of the Adam optimizer that decouples the L2 weight decay from the gradient-based updates, which often leads to better model generalization than standard Adam with L2 regularization.
+
+Question: What is a learning rate scheduler?
+Answer: A predefined or adaptive method for adjusting the learning rate during training. Examples include step decay, cosine annealing, or reducing the rate on a plateau of the validation loss.
+
+Question: What is a Graph Neural Network (GNN)?
+Answer: A type of neural network designed to work directly on graph-structured data. It learns node representations by aggregating information from neighboring nodes.
+
+Question: How does YOLO (You Only Look Once) work?
+Answer: It divides an image into a grid and, for each grid cell, predicts bounding boxes and class probabilities simultaneously. This single-pass approach makes it extremely fast for real-time object detection.
+
+Question: What is self-supervised learning?
+Answer: A learning paradigm where a model is trained on a pretext task using pseudo-labels generated from the input data itself (e.g., predicting a masked part of an image), without human-provided labels.
+
+Question: What is a contrastive loss function?
+Answer: A loss function, often used in self-supervised learning, that pulls representations of similar (positive) samples together in the embedding space while pushing dissimilar (negative) samples apart.
+
+Question: Why is weight initialization important?
+Answer: Proper initialization (e.g., Xavier/Glorot or He initialization) is crucial to prevent the gradients from vanishing or exploding during the initial phases of training, ensuring stable learning.
+
+Question: What is StyleGAN?
+Answer: A generative adversarial network (GAN) architecture that allows for explicit, layer-by-layer control over the style of the generated image, from coarse features (head shape) to fine details (hair texture).
+
+Question: What is a Siamese Network?
+Answer: An architecture with two or more identical subnetworks that process different inputs. It's trained to learn a similarity metric, making it useful for tasks like signature verification or finding similar images.
+
+Question: What is parameter-efficient fine-tuning (PEFT)?
+Answer: A set of techniques (like LoRA, Adapters) that fine-tune only a small fraction of a large pre-trained model's parameters, drastically reducing computational and storage costs.
+
+Question: What is LoRA (Low-Rank Adaptation)?
+Answer: A PEFT technique that freezes the pre-trained model weights and injects trainable, low-rank matrices into the layers of the network, allowing for efficient adaptation to new tasks.
+
+Question: What is early stopping?
+Answer: A regularization technique where training is halted when the model's performance on a held-out validation dataset stops improving, which helps to prevent overfitting.
+
+Question: What is the difference between model parallelism and data parallelism?
+Answer: Data parallelism replicates the model across multiple GPUs, feeding each a different batch of data. Model parallelism splits a single large model across multiple GPUs, with each GPU handling a different part of the model.
+
+Question: What is knowledge distillation?
+Answer: A compression technique where a smaller "student" model is trained to mimic the output logits (soft labels) of a larger, pre-trained "teacher" model, transferring knowledge to a more efficient form.
+
+Question: What is a Capsule Network (CapsNet)?
+Answer: An architecture designed to better model hierarchical relationships by using "capsules"—groups of neurons whose activity vectors represent an entity's properties like pose and orientation.
+
+Question: What is semantic segmentation?
+Answer: An image analysis task that involves classifying each pixel in an image into a specific class, resulting in a pixel-wise mask that delineates object boundaries.
+
+Question: What is differentiable programming?
+Answer: A programming paradigm where programs can be differentiated throughout, typically via automatic differentiation, allowing for gradient-based optimization of arbitrary numerical algorithms, not just neural networks.
+
+Question: What is a HyperNetwork?
+Answer: A small network that generates the weights for a larger main network. This allows for dynamic adaptation of the main network's parameters based on some input or condition.
+
+Advanced Transformers Questions
+
+Question: What is the full formula for Scaled Dot-Product Attention?
+Answer: $Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V$, where Q, K, and V are the Query, Key, and Value matrices, and $d_k$ is the dimension of the keys.
+
+Question: Why is the attention score in Transformers scaled by the square root of the key dimension ($d_k$)?
+Answer: To prevent the dot products from growing too large, which would push the softmax function into regions with extremely small gradients, thereby stabilizing the training process.
+
+Question: What is the difference between cross-attention and self-attention?
+Answer: Self-attention relates different positions within a single sequence. Cross-attention, used in the decoder, relates positions from two different sequences; for example, it allows the decoder to attend to the encoder's output.
+
+Question: What is the purpose of Layer Normalization in a Transformer block?
+Answer: It normalizes the inputs across the features for each data sample independently. This stabilizes the hidden state dynamics throughout the model, enabling smoother gradient flow and more reliable training.
+
+Question: How does a Vision Transformer (ViT) process images?
+Answer: It splits an image into a sequence of fixed-size patches, flattens them, linearly embeds them, adds position embeddings, and feeds the resulting sequence of vectors to a standard Transformer encoder.
+
+Question: What is ALiBi (Attention with Linear Biases)?
+Answer: A positional encoding alternative that does not use explicit embedding vectors. Instead, it directly biases the query-key attention scores based on the distance between tokens, improving extrapolation to longer sequences.
+
+Question: What is Rotary Position Embedding (RoPE)?
+Answer: A type of relative position embedding that encodes positional information by rotating the query and key vectors based on their absolute position, naturally incorporating relative positions into the dot-product attention.
+
+Question: What is a Mixture of Experts (MoE) layer in a Transformer?
+Answer: A layer that replaces the dense feed-forward network with a sparse architecture containing multiple "expert" networks and a "gating" network that routes each token to a small number of experts, increasing parameter count without a proportional increase in FLOPs.
+
+Question: What is FlashAttention?
+Answer: An I/O-aware attention algorithm that computes exact attention but is much faster and more memory-efficient by restructuring the computation to minimize reads/writes between GPU SRAM and the slower high-bandwidth memory (HBM).
+
+Question: How does the ELECTRA model work?
+Answer: It uses a "replaced token detection" task. A small generator model replaces some input tokens, and a larger discriminator model must predict which tokens were replaced by the generator. This is more sample-efficient than standard masked language modeling.
+
+Question: What is a Universal Transformer?
+Answer: A variant that applies the same block of layers multiple times over the sequence representations in a recurrent fashion, refining them with each pass.
+
+Question: What is Sparse Attention?
+Answer: A class of attention mechanisms (e.g., in Longformer, BigBird) that restrict each token to attend to only a subset of other tokens (e.g., local and global tokens), reducing the quadratic complexity of self-attention.
+
+Question: What is multimodality in the context of Transformers?
+Answer: The ability of a single Transformer model to process and relate information from multiple data types (modalities) simultaneously, such as text, images, and audio.
+
+Question: What is a causal mask (or look-ahead mask)?
+Answer: An attention mask used in decoders to prevent a position from attending to subsequent positions. This ensures that the prediction for a token can only depend on the previously generated tokens.
+
+Question: How does RoBERTa improve upon BERT?
+Answer: It improves BERT by training on a much larger dataset for a longer time, using larger batch sizes, removing the Next Sentence Prediction task, and using dynamic masking.
+
+Question: How does Sentence-BERT create meaningful sentence embeddings?
+Answer: It uses a siamese or triplet network structure to fine-tune a pre-trained BERT model, such that sentences with similar meanings are mapped to nearby points in the vector space.
+
+Question: What is the difference between absolute and relative position embeddings?
+Answer: Absolute embeddings assign a unique vector to each numerical position (1, 2, 3...). Relative embeddings encode the distance or relationship between pairs of tokens, not their fixed positions.
+
+Question: What is the [CLS] token used for in models like BERT?
+Answer: It is a special token added to the beginning of the input sequence. The final hidden state corresponding to this token is typically used as the aggregate sequence representation for classification tasks.
+
+Question: What is SwiGLU?
+Answer: An activation function used in modern Transformer feed-forward networks (like in LLaMA) which is a variant of Gated Linear Units (GLU). It often provides better performance than standard ReLU.
+
+Question: What is Grouped-Query Attention (GQA)?
+Answer: An attention mechanism that shares a single key and value head across multiple query heads, reducing the memory bandwidth requirements of attention during inference.
+
+Advanced Generative AI Questions
+
+Question: What is Reinforcement Learning from Human Feedback (RLHF)?
+Answer: A three-stage process to align LLMs: 1) Supervised fine-tuning, 2) Training a reward model on human preference data, and 3) Fine-tuning the LLM using reinforcement learning (like PPO) against the reward model.
+
+Question: What is Direct Preference Optimization (DPO)?
+Answer: An alternative to RLHF that is more stable and computationally efficient. It uses a direct loss function on preference data to fine-tune the LLM, bypassing the need for an explicit reward model.
+
+Question: What is model quantization?
+Answer: The process of reducing the numerical precision of a model's weights and activations (e.g., from 32-bit float to 8-bit integer) to reduce memory footprint, increase inference speed, and lower energy consumption.
+
+Question: What is speculative decoding?
+Answer: An inference optimization technique where a small, fast "draft" model generates a sequence of tokens, which are then verified in a single pass by the larger, more powerful "target" model, significantly speeding up generation.
+
+Question: What is a "world model" in the context of Gen AI?
+Answer: An internal, learned representation of the principles and dynamics of the environment an AI model is trained on. This allows the model to simulate outcomes, reason, and plan.
+
+Question: What is "red teaming" for AI models?
+Answer: A form of adversarial testing where a dedicated team actively tries to find flaws and vulnerabilities in an AI model, specifically trying to elicit harmful, biased, or unsafe outputs to identify and fix them.
+
+Question: What is Classifier-Free Guidance in diffusion models?
+Answer: A technique that allows a single diffusion model to be used for both conditional (e.g., text-to-image) and unconditional generation, improving sample quality by "guiding" the denoising process towards the conditioning text.
+
+Question: What is Retrieval-Augmented Fine-tuning (RAFT)?
+Answer: A training method that fine-tunes an LLM by providing it with both a query and relevant "oracle" documents, teaching it how to reason based on provided text and ignore its own parametric knowledge.
+
+Question: What is a State Space Model (SSM) like Mamba?
+Answer: A class of sequence models that use a recurrent state mechanism. They can process very long sequences with linear complexity, emerging as an efficient and powerful alternative to Transformers.
+
+Question: What is Tool-Augmented Language Models (TALM)?
+Answer: A framework where LLMs are trained or prompted to interact with external tools (e.g., calculators, search engines, code interpreters) via APIs to overcome their inherent limitations and solve more complex problems.
+
+Question: How can you evaluate the factuality of a generative model's output?
+Answer: By comparing generated statements against a trusted knowledge source, using human evaluators, or employing other models as fact-checkers. Metrics like FActScore automate parts of this process.
+
+Question: What is the problem of "sycophancy" in LLMs?
+Answer: The tendency of instruction-tuned models to agree with a user's stated beliefs or preferences, even if they are incorrect, rather than providing objective or corrective information.
+
+Question: What is a prompt injection attack?
+Answer: An attack where a user crafts input to hijack the model's function, either by overriding its original system instructions or causing it to leak confidential information contained in its prompt.
+
+Question: What is a Consistency Model?
+Answer: A type of generative model that learns to map any point on a diffusion model's trajectory directly back to the original data in a single step, enabling extremely fast, high-quality generation.
+
+Question: What is the difference between the BLEU and ROUGE evaluation metrics?
+Answer: BLEU is precision-oriented (how many n-grams in the generated text appeared in the reference) and used for translation. ROUGE is recall-oriented (how many n-grams in the reference appeared in the generated text) and used for summarization.
+
+Question: What is "in-context learning"?
+Answer: The ability of a large language model to perform a new task at inference time simply by being provided with a prompt containing a few examples (a few-shot prompt), without any weight updates.
+
+Question: What is the "context window" of an LLM?
+Answer: The maximum number of tokens (including both the input prompt and the generated output) that a model can process at one time.
+
+Question: What is "reasoning as a program"?
+Answer: A prompting or fine-tuning approach where the LLM is instructed to solve a problem by generating a piece of code (e.g., in Python). The final answer is then derived by executing that code, offloading computation.
+
+Question: What is the "anthropic principle" in AI safety?
+Answer: A set of guidelines for building AI systems, focusing on creating models that are Helpful, Harmless, and Honest. This is often implemented via methods like Constitutional AI.
+
+Question: What is a Mixture of Agents (MoA)?
+Answer: An advanced architecture where a 'router' model assigns a task to several specialized 'expert' models, and a final 'aggregator' model synthesizes their outputs into a single, high-quality response.
+
+Advanced LangChain & RAG Questions
+
+Question: What is a Self-Querying Retriever in LangChain?
+Answer: A retriever that uses an LLM to parse a user's natural language query into a structured query containing both a semantic search query and metadata filters, which is then run against a vector store.
+
+Question: What is a Parent Document Retriever?
+Answer: An advanced RAG strategy that performs searching over small, granular chunks of text but retrieves and passes the larger "parent" documents to the LLM, providing more complete context.
+
+Question: What is the purpose of a re-ranker in a RAG pipeline?
+Answer: After an initial retrieval step fetches a set of documents, a re-ranker (often a more sophisticated cross-encoder model) re-scores and re-orders these documents for relevance before passing the top K to the LLM.
+
+Question: What is Hybrid Search in RAG?
+Answer: A retrieval technique that combines scores from both a keyword-based search algorithm (like BM25) and a semantic vector search to leverage the strengths of both methods.
+
+Question: What is RAGAS?
+Answer: A framework for evaluating RAG pipelines without needing human-annotated ground truth. It measures metrics like faithfulness (answer consistency with context) and answer relevancy.
+
+Question: What is LangSmith?
+Answer: A platform by LangChain for debugging, testing, evaluating, and monitoring LLM applications. It provides detailed traces of chain and agent executions to diagnose issues and track performance.
+
+Question: What is Graph RAG?
+Answer: An advanced RAG technique where knowledge is first extracted from documents into a knowledge graph. The retriever then performs graph traversal to find interconnected pieces of information, enabling more complex reasoning.
+
+Question: What is the role of the `Runnable` protocol in LangChain Expression Language (LCEL)?
+Answer: It is the core interface that makes any component (prompt, model, parser) composable in an LCEL chain. All `Runnable` objects expose standard methods like `.invoke()`, `.batch()`, and `.stream()`.
+
+Question: What is "query transformation" in advanced RAG?
+Answer: The process of modifying or expanding the user's query before retrieval. Techniques include generating multiple queries from different perspectives (Multi-Query) or breaking a complex question into sub-questions.
+
+Question: How does `ConversationBufferWindowMemory` work in LangChain?
+Answer: It's a memory component that stores the last 'k' turns of a conversation, ensuring the conversational context remains relevant and doesn't exceed the model's context window.
+
+Question: What is the difference between an OpenAI Function Calling agent and a ReAct agent?
+Answer: A Function Calling agent uses the LLM's native ability to format its output into a JSON object to call specific tools. A ReAct agent uses a prompting loop (Reason, Act, Observe) where the LLM explicitly thinks about which tool to use next.
+
+Question: What is a "Multi-representation indexer"?
+Answer: A RAG indexing strategy where you create and store multiple vector embeddings for each document, such as a summary vector and a hypothetical question vector, to improve the chances of successful retrieval.
+
+Question: How can you handle both structured (SQL) and unstructured (text) data in a single system?
+Answer: By creating a router agent that first classifies the user's query and then directs it to either a text-based RAG chain or a text-to-SQL chain that can query the structured database.
+
+Question: What is the "Needle in a Haystack" test?
+Answer: An evaluation method for LLMs that tests their ability to recall a specific fact (the "needle") buried within a long block of irrelevant text (the "haystack") provided in the context window.
+
+Question: What is the "lost in the middle" problem for LLMs?
+Answer: The observed phenomenon where models recall information at the very beginning and very end of a long context window more reliably than information placed in the middle.
+
+Question: What is a "Fallback" in LangChain Expression Language?
+Answer: A mechanism that allows you to define a sequence of `Runnables` to try in order. If the first one fails (e.g., due to an API error), the system gracefully falls back to the next one in the sequence.
+
+Question: How can you implement citations in a RAG system?
+Answer: By ensuring the retrieved document chunks retain their source metadata (e.g., document name, page number) and instructing the LLM in the prompt to reference these sources when it uses them to formulate an answer.
+
+Question: What is the challenge of "context stuffing" in RAG?
+Answer: The problem of overloading the LLM's context window with too many retrieved documents, which can dilute the relevant information, increase latency and cost, and potentially confuse the model.
+
+Question: What is a custom tool in LangChain?
+Answer: A standard Python function decorated with `@tool` that can be given to an agent. This allows the agent to perform specialized, user-defined actions beyond the pre-built tools.
+
+Question: What is the purpose of an output parser in LangChain?
+Answer: It takes the raw string output from an LLM and parses it into a more structured format, such as a JSON object, a list of strings, or a custom Pydantic object, for easier programmatic use.
