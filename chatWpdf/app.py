@@ -1,44 +1,58 @@
-import streamlit as st
+import streamlit as st 
+from utils import process_pdf
+from langchain.chains import RetrievalQA
+
+
+from langchain_groq import ChatGroq
 import tempfile
-# Also good practice to update langchain imports
-from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import FAISS
 
-# --- Page Configuration and Title ---
-st.set_page_config(page_title="Chat with PDF", layout="centered")
-st.title("💬 Chat with Your PDF")
+st.set_page_config(page_title="chat W pdf")
+st.title("Chat with your pdf using AI")
 
-# --- PDF File Uploader (on the main page) ---
-uploaded_file = st.file_uploader("Upload your PDF file here", type="pdf")
+groq_api_key = st.sidebar.text_input(label="Enter your GROQ API", type="password")
 
-# --- Spacer for visual separation ---
-st.write("---") 
+if not groq_api_key:
+    st.warning("Please enter your GROQ API key")
+    st.stop()
+    
+    
+uploaded_file = st.file_uploader("Upload your PDF here,", type=['pdf'])
 
-# --- Initialize Chat History ---
-# This makes sure the chat messages are saved when the app reruns
-if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "assistant", "content": "Hello! Upload a PDF and ask me anything about it."}]
+user_question = st.text_input("Ask your question about the PDF")
 
-# --- Display Existing Chat Messages ---
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
 
-# --- Chat Input Box ---
-if prompt := st.chat_input("Ask a question..."):
-    # Add and display the user's message
-    st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user"):
-        st.markdown(prompt)
-
-    # --- Generate and Display Assistant's Response ---
-    with st.chat_message("assistant"):
-        if uploaded_file is None:
-            response = "Please upload a PDF file first so I can answer your questions."
-        else:
-            # Placeholder for actual backend logic
-            # In a real app, this is where you'd call your AI model
-            response = f"Thinking about '{prompt}' from the file '{uploaded_file.name}'..."
+if uploaded_file and user_question:
+    with st.spinner("Processing the PDF"):
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+            tmp.write(uploaded_file.read())
+            tmp_path = tmp.name
+            
+            
+        vectorstore = process_pdf(tmp_path)
+        retriever = vectorstore.as_retriever()
         
-        st.markdown(response)
-        st.session_state.messages.append({"role": "assistant", "content": response})
+        
+        llm = ChatGroq(model_name="Gemma2-9b-It", groq_api_key=groq_api_key)
+        
+        
+        chain = RetrievalQA.from_chain_type(
+            llm = llm,
+            retriever = retriever,
+            return_source_documents=True,
+        )
+        
+        result = chain.invoke({'query': user_question})
+        
+        st.subheader("Answer :")
+        
+        st.success(result['result'])
+        
+        
+        with st.expander("📄 Source Chunks"):
+            for doc in result["source_documents"]:
+                st.write(doc.page_content)
+                
+                
+                
+else :
+    st.warning('File and Input cannot be empty')
